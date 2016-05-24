@@ -1,6 +1,6 @@
 package main
 
-import "github.com/tonymtz/gekko/server"
+import "./server"
 
 func main() {
 	server.Start()

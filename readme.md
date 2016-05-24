@@ -1,46 +1,21 @@
 ![gekko](https://github.com/tonymtz/gekko/blob/master/static/gekko.png)
 
-# Gekko
+# Kekko
 
-Sample project using [Echo](https://github.com/labstack/echo).
+Sample project using [Echo](https://github.com/tonymtz/gekko).
 
 ## Features
-- `fasthttp` enabled by default
-- OAuth2 with Google & Dropbox
-- JWT for user authentication
+- none
 
 ## Quick Start
 This lib requires:
-
-- Golang v1.6
-- sqlite3 v3.8.10.2
+- virtualbox 5.0.16
+- vagrant Vagrant 1.8.1
+- internetz
 
 ### Installation
 ```sh
-$ go get
-```
-
-#### Database
-
-Create database file using sqlite3 (you must have sqlite3 installed)
-```sh
-$ sqlite3 gekko.db
-.databases
-```
-
-and then create the `user` table:
-
-```sql
-CREATE TABLE "user" (
-    `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    `id_provider` TEXT NOT NULL,
-    `display_name` TEXT NOT NULL,
-    `email` TEXT NOT NULL,
-    `profile_picture` TEXT NOT NULL,
-    `role` INTEGER NOT NULL DEFAULT 1,
-    `token` TEXT,
-    `jwt` TEXT
-);
+$ vagrant up
 ```
 
 ### Configuration
@@ -50,12 +25,17 @@ Recommended envs: `dev`, `test`.
 
 Use `env.conf.sample` as base since it has the expected format. Just replace the values!
 
-### Test
+### Vagrant
+```sh
+$ vagrant ssh
+```
+
+#### Test
 ```sh
 $ export GEKKO_ENV=test && go test
 ```
 
-### Running
+#### Running
 ```sh
 $ export GEKKO_ENV=[env] && go run main.go
 ```
