@@ -1,6 +1,6 @@
 package providers
 
-import "github.com/tonymtz/gekko/services/oauth2"
+import "../../../services/oauth2"
 
 const (
 	DROPBOX_AUTHORIZATION_URL = "https://www.dropbox.com/oauth2/authorize?client_id=%v&response_type=code&redirect_uri=%v"

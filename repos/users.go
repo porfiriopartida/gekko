@@ -5,7 +5,7 @@ import (
 	"github.com/mattn/go-sqlite3"
 	"log"
 	"errors"
-	"github.com/tonymtz/gekko/models"
+	"../models"
 )
 
 var DB_DRIVER string

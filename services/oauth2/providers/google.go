@@ -1,6 +1,6 @@
 package providers
 
-import "github.com/tonymtz/gekko/services/oauth2"
+import "../../../services/oauth2"
 
 const (
 	GOOGLE_AUTHORIZATION_URL = "https://accounts.google.com/o/oauth2/v2/auth?client_id=%v&response_type=code&redirect_uri=%v&scope=email profile"

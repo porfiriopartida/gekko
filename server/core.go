@@ -6,7 +6,7 @@ import (
 	"github.com/labstack/gommon/log"
 	"github.com/labstack/echo/engine/fasthttp"
 	"strconv"
-	"github.com/tonymtz/gekko/server/config"
+	"./config"
 )
 
 func Start() {

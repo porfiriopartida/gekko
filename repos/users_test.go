@@ -5,8 +5,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"database/sql"
 	"errors"
-	"github.com/tonymtz/gekko/models"
-	"github.com/tonymtz/gekko/server/config"
+	"../models"
+	"../server/config"
 )
 
 var (
