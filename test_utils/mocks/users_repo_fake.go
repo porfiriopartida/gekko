@@ -1,8 +1,8 @@
 package mocks
 
 import (
-	"../../repos"
-	"../../models"
+	"github.com/tonymtz/gekko/repos"
+	"github.com/tonymtz/gekko/models"
 	"errors"
 )
 

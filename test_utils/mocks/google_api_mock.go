@@ -1,7 +1,7 @@
 package mocks
 
 import (
-	"../../services"
+	"github.com/tonymtz/gekko/services"
 	"errors"
 )
 

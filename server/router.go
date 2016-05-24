@@ -2,7 +2,7 @@ package server
 
 import (
 	"github.com/labstack/echo"
-	"../routes"
+	"github.com/tonymtz/gekko/routes"
 )
 
 func router(e *echo.Echo) {

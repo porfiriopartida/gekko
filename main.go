@@ -1,12 +1,7 @@
 package main
 
-import (
-	"fmt"
-	"os"
-	"./server"
-)
+import "github.com/tonymtz/gekko/server"
 
 func main() {
-	fmt.Println(os.Getenv("GOPATH"))
 	server.Start()
 }

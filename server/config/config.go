@@ -5,7 +5,7 @@ import (
 	"gopkg.in/yaml.v2"
 	"os"
 	"fmt"
-	"../utils"
+	"github.com/tonymtz/gekko/server/utils"
 )
 
 type config struct {
@@ -25,8 +25,9 @@ func init() {
 }
 
 func getConfig() *config {
+
 	env := os.Getenv("GEKKO_ENV")
-	fmt.Println("LOCAL Using: " + env);
+
 	var (
 		dat []byte
 		err error

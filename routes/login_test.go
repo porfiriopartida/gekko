@@ -7,9 +7,9 @@ import (
 	"testing"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/engine/standard"
-	"../repos"
-	"../services"
-	"../test_utils/mocks"
+	"github.com/tonymtz/gekko/repos"
+	"github.com/tonymtz/gekko/services"
+	"github.com/tonymtz/gekko/test_utils/mocks"
 )
 
 var (

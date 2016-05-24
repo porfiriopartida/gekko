@@ -1,13 +1,13 @@
 package routes
 
 import (
-	"../models"
-	"../repos"
-	"../server/config"
-	"../server/status"
-	"../services"
-	"../services/oauth2"
-	"../services/oauth2/providers"
+	"github.com/tonymtz/gekko/models"
+	"github.com/tonymtz/gekko/repos"
+	"github.com/tonymtz/gekko/server/config"
+	"github.com/tonymtz/gekko/server/status"
+	"github.com/tonymtz/gekko/services"
+	"github.com/tonymtz/gekko/services/oauth2"
+	"github.com/tonymtz/gekko/services/oauth2/providers"
 	"github.com/labstack/echo"
 	"fmt"
 	"crypto/rand"
