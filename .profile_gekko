@@ -1,0 +1,12 @@
+#export GOPATH=/usr/lib/go/bin/
+export GOPATH=/vagrant/go
+
+printf "
+=============================
+= HOLA AMIGOS RETROS =D     =
+=============================
+# export GEKKO_ENV=test && go test
+# export GEKKO_ENV=[env] && go run main.go
+=============================
+"
+

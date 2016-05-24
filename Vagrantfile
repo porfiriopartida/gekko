@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -71,11 +71,12 @@ Vagrant.configure(2) do |config|
 
       # Installing memes
       echo "sudo apt-get install -y golang sqlite3 libsqlite3-dev"
-      sudo apt-get install -y golang sqlite3 libsqlite3-dev
+      # Not sure if needed: golang-go
+      sudo apt-get install -y golang sqlite3 libsqlite3-dev git
 
       # Installing the database
       echo "Installing gekko.db"
-
+      cd /vagrant
       echo 'CREATE TABLE "user" (
           `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
           `id_provider` TEXT NOT NULL,
@@ -87,8 +88,9 @@ Vagrant.configure(2) do |config|
           `jwt` TEXT
       );' | sqlite3 gekko.db
 
-      # TODO: Add export to ~/.profile | ~/.bashrc
-      # export GEKKO_ENV=test && go test
-      # expoexrt GEKKO_ENV=[env] && go run main.go
+      echo "Updating ~/.profile"
+      echo ". /vagrant/.profile_gekko" >> ~/.profile
+      . /vagrant/.profile_gekko
+      cd /vagrant/ && go get
   SHELL
 end
