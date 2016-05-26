@@ -1,10 +1,15 @@
-#export GOPATH=/usr/lib/go/bin/
+# This is where the project lives
+cd /vagrant
+
+# GOPATH is somewhere where we will download our go dependencies using go get
 export GOPATH=/vagrant/go
 
+# Tips helps and greetings.
 printf "
 =============================
 = HOLA AMIGOS RETROS =D     =
 =============================
+# export GEKKO_ENV=dev
 # export GEKKO_ENV=test && go test
 # export GEKKO_ENV=[env] && go run main.go
 =============================
